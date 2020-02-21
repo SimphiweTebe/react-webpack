@@ -14,11 +14,17 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                "style-loader",
-                MiniCssExtractPlugin.loader,
-                "css-loader",
-                "sass-loader"
+                    "style-loader",
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
                 ]
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/,
+                use: {
+                    loader: 'url-loader',
+                }
             },
             {
                 test: /\.html$/,
